@@ -15,6 +15,7 @@ class CommandBus
 
     public function __construct()
     {
+        $this->handlerNamespaces = [];
     }
 
 
@@ -39,7 +40,7 @@ class CommandBus
      */
     public function handle(CommandInterface $command)
     {
-        $handlerName = $command->getCommandName();
+        $handlerName = $command->getCommandName() . 'Handler';
 
         $handlers = $this->loadHandlers($handlerName);
 

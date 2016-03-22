@@ -2,15 +2,13 @@
 
 namespace TomWright\Commander\Handler;
 
-use TomWright\Commander\Command\CommandInterface;
-
 interface HandlerInterface
 {
 
     /**
-     * @param CommandInterface $command
+     * @param mixed $command
      * @return mixed
      */
-    public function handle(CommandInterface $command);
+    public function handle($command);
 
 }
