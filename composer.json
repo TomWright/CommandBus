@@ -1,0 +1,18 @@
+{
+    "name": "tomwright/commander",
+    "description": "A simple command bus.",
+    "authors": [
+        {
+            "name": "Tom Wright",
+            "email": "contact@tomwright.me"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "TomWright\\Commander\\": "src/"
+        }
+    }
+}
