@@ -4,14 +4,12 @@ namespace TomWright\Commander;
 
 use TomWright\Commander\Command\CommandInterface;
 use TomWright\Commander\Handler\HandlerInterface;
+use TomWright\Singleton\SingletonTrait;
 
 class CommandBus
 {
 
-    /**
-     * @var CommandBus
-     */
-    protected static $singletonInstance;
+    use SingletonTrait;
 
     /**
      * @var string[]
@@ -21,19 +19,6 @@ class CommandBus
     protected function __construct()
     {
         $this->handlerNamespaces = [];
-    }
-
-
-    /**
-     * @return CommandBus
-     */
-    public static function getInstance()
-    {
-        if (! is_object(static::$singletonInstance)) {
-            static::$singletonInstance = new static();
-        }
-
-        return static::$singletonInstance;
     }
 
 
