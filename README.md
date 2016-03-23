@@ -69,3 +69,6 @@ $command->setUsername('Some user');
 $command->setPassword('Somepassword123');
 $bus->handle($command);
 ```
+
+Remember - a Command is an **action** and not a **notification**.
+If you are looking for a notification/event handler see [TomWright/Eventing](https://github.com/TomWright/Eventing).
