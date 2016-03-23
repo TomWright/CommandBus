@@ -65,7 +65,7 @@ namespace {
 
         public function testHandlerIsExecuted()
         {
-            $bus = new \TomWright\Commander\CommandBus();
+            $bus = \TomWright\Commander\CommandBus::getInstance();
             $bus->addHandlerNamespace('\\Testing\\CommandTest\\');
 
             $command = new \Testing\CommandTest\SimpleCommand();

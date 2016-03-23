@@ -9,13 +9,31 @@ class CommandBus
 {
 
     /**
+     * @var CommandBus
+     */
+    protected static $singletonInstance;
+
+    /**
      * @var string[]
      */
     protected $handlerNamespaces;
 
-    public function __construct()
+    protected function __construct()
     {
         $this->handlerNamespaces = [];
+    }
+
+
+    /**
+     * @return CommandBus
+     */
+    public static function getInstance()
+    {
+        if (! is_object(static::$singletonInstance)) {
+            static::$singletonInstance = new static();
+        }
+
+        return static::$singletonInstance;
     }
 
 
