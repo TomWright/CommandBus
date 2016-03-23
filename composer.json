@@ -8,7 +8,8 @@
         }
     ],
     "require": {
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "*",
+        "tomwright/singleton": "*"
     },
     "autoload": {
         "psr-4": {

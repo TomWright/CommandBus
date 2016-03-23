@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "de687e74b8a1664746d1855b18d61d4e",
-    "content-hash": "f8912f683342b2fc590170ce8d8886c9",
+    "hash": "7a8b64ca7b266759ce4477d1f4f889da",
+    "content-hash": "c80aee8bda995cc40d1514ffc4c2baa7",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -531,16 +531,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.0.6",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "49bc700750196c04dd6bc2c4c99cb632b893836b"
+                "reference": "0a6d198af94d02956f2eb8bd59d5ab3166dc85da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/49bc700750196c04dd6bc2c4c99cb632b893836b",
-                "reference": "49bc700750196c04dd6bc2c4c99cb632b893836b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/0a6d198af94d02956f2eb8bd59d5ab3166dc85da",
+                "reference": "0a6d198af94d02956f2eb8bd59d5ab3166dc85da",
                 "shasum": ""
             },
             "require": {
@@ -558,7 +558,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "3.1.x-dev"
                 }
             },
             "autoload": {
@@ -583,7 +583,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-12-08 08:47:06"
+            "time": "2016-03-09 13:33:49"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1099,6 +1099,39 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2016-02-23 15:16:06"
+        },
+        {
+            "name": "tomwright/singleton",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TomWright/Singleton.git",
+                "reference": "c9ca1fd5720f449f96947963833532a53b7dcfb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TomWright/Singleton/zipball/c9ca1fd5720f449f96947963833532a53b7dcfb1",
+                "reference": "c9ca1fd5720f449f96947963833532a53b7dcfb1",
+                "shasum": ""
+            },
+            "require": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TomWright\\Singleton\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Tom Wright",
+                    "email": "contact@tomwright.me"
+                }
+            ],
+            "description": "A quick and easy singleton package.",
+            "time": "2016-03-23 11:19:18"
         }
     ],
     "packages-dev": [],
