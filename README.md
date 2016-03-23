@@ -48,7 +48,7 @@ namespace App\Commanding\Handler;
 
 class RegisterUserHandler implements \TomWright\Commander\Handler\HandlerInterface
 {   
-    public function handle($command)
+    public function handle(\TomWright\Commander\Command\CommandInterface $command)
     {
     	echo "Registering user \"{$command->getUsername()}\" with password \"{$command->getPassword()}\".";
     }

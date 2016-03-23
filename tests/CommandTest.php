@@ -43,7 +43,7 @@ namespace Testing\CommandTest {
          * @param SimpleCommand $command
          * @return mixed
          */
-        public function handle($command)
+        public function handle(\TomWright\Commander\Command\CommandInterface $command)
         {
             $command->setExecuted(true);
         }
