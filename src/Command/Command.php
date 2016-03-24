@@ -6,6 +6,12 @@ abstract class Command implements CommandInterface
 {
 
     /**
+     * Determines whether or not the command has been completed successfully.
+     * @var bool
+     */
+    protected $commandWasSuccessful = false;
+
+    /**
      * Returns the name of the Command.
      * E.g. \Some\Namespace\EmailUserCommand => EmailUser
      * @return string
@@ -40,4 +46,25 @@ abstract class Command implements CommandInterface
 
         return $className;
     }
+
+    /**
+     * Sets whether or not the command has been successfully executed.
+     * @param bool $successful
+     * @return bool
+     */
+    public function setSuccessful($successful)
+    {
+        $this->commandWasSuccessful = ($successful == true);
+    }
+
+
+    /**
+     * Returns whether or not the command has been successfully executed.
+     * @return bool
+     */
+    public function wasSuccessful()
+    {
+        return $this->commandWasSuccessful;
+    }
+
 }

@@ -46,6 +46,8 @@ namespace Testing\CommandTest {
         public function handle(\TomWright\Commander\Command\CommandInterface $command)
         {
             $command->setExecuted(true);
+
+            $command->setSuccessful(true);
         }
     }
 
@@ -76,6 +78,20 @@ namespace {
             $bus->handle($command);
 
             $this->assertTrue($command->getExecuted());
+        }
+
+        public function testCommandWasSuccessful()
+        {
+            $bus = \TomWright\Commander\CommandBus::getInstance();
+            $bus->addHandlerNamespace('\\Testing\\CommandTest\\');
+
+            $command = new \Testing\CommandTest\SimpleCommand();
+
+            $this->assertFalse($command->wasSuccessful());
+
+            $bus->handle($command);
+
+            $this->assertTrue($command->wasSuccessful());
         }
 
     }
